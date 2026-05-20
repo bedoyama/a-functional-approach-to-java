@@ -16,7 +16,7 @@ public class FilesListing {
 
     public static void main(String... args) {
 
-        // ADAPT AS NECESARY
+        // ADAPT AS NECESSARY
         var dir = Paths.get("../04-immutability");
 
         try (var stream = Files.list(dir)) {
