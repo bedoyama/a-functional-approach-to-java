@@ -12,7 +12,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.function.Predicate;
 
-// ADAPT AS NECESARY
+// ADAPT AS NECESSARY
 var start = Paths.get("../../04-immutability");
 
 try (var stream = Files.walk(start)) {

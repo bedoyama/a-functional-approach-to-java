@@ -16,7 +16,7 @@ public class FilesWalking {
 
     public static void main(String[] args) {
 
-        // ADAPT AS NECESARY
+        // ADAPT AS NECESSARY
         var start = Paths.get("../04-immutability");
 
         try (var stream = Files.walk(start)) {
