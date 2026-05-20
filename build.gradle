@@ -8,16 +8,16 @@ java {
     }
 }
 
-ext.addExample = { subproject, location, name, exampleMainClass, taskDescription ->
-    sourceSets.create(name) {
+ext.addExample = { subproject, location, exampleName, exampleMainClass, taskDescription ->
+    subproject.sourceSets.create(exampleName) {
         java.srcDirs = ["${subproject.projectDir}/${location}"]
     }
 
-    subproject.tasks.create(name: name, type: JavaExec) {
+    subproject.tasks.create(name: exampleName, type: JavaExec) {
         group = subproject.exampleGroup
         description = taskDescription
         mainClass = exampleMainClass
-        classpath = sourceSets[name].runtimeClasspath
+        classpath = subproject.sourceSets[name].runtimeClasspath
     }
 }
 
